@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQs</title>
+      <!-- favicon link start -->
+   <link rel="shortcut icon" href="assets/coin.png" type="image/x-icon">
+   <!-- favicon link end -->
+
     <!-- tailwind CSS and DaisyUI componant link start -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -50,7 +54,7 @@
     <header>
     <!-- navigation bar start -->
     <nav class="bg-[#F9F7F3] fixed top-0 left-0 right-0">
-      <div class="container mx-auto h-24 flex items-center justify-between">
+      <div class="mx-4 lg:container lg:mx-auto h-24 flex items-center justify-between">
         <div>
           <a href="http://127.0.0.1:5500/index.html">
             <button
@@ -60,7 +64,7 @@
             </button>
           </a>
         </div>
-        <div class="flex gap-3 items-center">
+        <div class="hidden lg:flex gap-3 items-center">
           <span><img src="assets/logo.png" alt="" /></span>
           <span class="font-bold text-primary text-2xl">Donate Bangladesh</span>
         </div>
@@ -75,12 +79,12 @@
     <!-- header section end -->
 
     <!-- main body section start -->
-     <main>
+     <main class="mx-3 lg:auto">
       <!-- Faqs heding section start -->
        <section class="container mx-auto mt-24">
         <div class="flex items-center gap-3 h-24">
           <p class="font-extrabold text-5xl text-primary">Important FAQ</p>
-          <p class=" font-bold text-6xl text-primary -mt-2"><i class="fa-regular fa-comment-dots"></i></p>
+          <p class="hidden lg:block font-bold text-6xl text-primary -mt-2"><i class="fa-regular fa-comment-dots"></i></p>
         </div>
        </section>
       <!-- Faqs heding section end -->

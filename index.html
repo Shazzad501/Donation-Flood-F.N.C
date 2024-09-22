@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donation-F.N.C</title>
+  <!-- favicon link start -->
+   <link rel="shortcut icon" href="assets/coin.png" type="image/x-icon">
+  <!-- favicon link end -->
   <!-- tailwind CSS and DaisyUI componant link start -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -40,13 +43,13 @@
    <header>
     <!-- navigation bar start -->
     <nav class="bg-[#F9F7F3] fixed top-0 left-0 right-0">
-      <div class="container mx-auto h-24 flex items-center justify-between">
+      <div class="mx-5 lg:container lg:mx-auto h-24 flex items-center justify-between">
         <div>
          <a href="http://127.0.0.1:5500/FAQs.html">
           <button class="btn font-bold text-lg text-primary flex items-center justify-center bg-btnColor hover:bg-btnColor">Blog</button>
          </a>
         </div>
-        <div class="flex gap-3 items-center">
+        <div class="hidden lg:flex gap-3 items-center">
           <span><img src="assets/logo.png" alt=""></span>
           <span class="font-bold text-primary text-xl">Donate Bangladesh</span>
         </div>
@@ -69,9 +72,9 @@
   <!-- main body section start -->
    <main>
     <!-- donation div section start -->
-    <section class="container mx-auto mt-56 flex flex-col gap-20 mb-24">
+    <section class="mx-4 lg:container lg:mx-auto mt-56 flex flex-col gap-20 mb-24">
       <!-- Donation noayakhali start -->
-      <div class="flex items-center justify-center gap-8 p-6 shadow rounded-xl bg-white">
+      <div class="flex flex-col gap-5 lg:flex lg:flex-row items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white">
         <!-- img content div -->
         <div class="w-full h-[389px] lg:w-1/2">
           <img class="w-full h-full" src="assets/noakhali.png" alt="">
@@ -99,7 +102,7 @@
       <!-- Donation noayakhali end -->
 
       <!-- Donation Feni start -->
-      <div class="flex items-center justify-center gap-8 p-6 shadow rounded-xl bg-white">
+      <div class="flex flex-col gap-5 lg:flex lg:flex-row  items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white">
         <!-- img content div -->
         <div class="w-full h-[441px] lg:w-1/2">
           <img class="w-full h-full" src="assets/feni.png" alt="">
@@ -127,7 +130,7 @@
       <!-- Donation Feni end -->
 
       <!-- Quota Injori section start -->
-      <div class="flex items-center justify-center gap-8 p-6 shadow rounded-xl bg-white">
+      <div class="flex flex-col gap-5 lg:flex lg:flex-row items-center justify-center lg:gap-8 p-6 shadow rounded-xl bg-white">
         <!-- img content div -->
         <div class="w-full h-[467px] lg:w-1/2">
           <img class="w-full h-full" src="assets/quota-protest.png" alt="">
@@ -155,7 +158,7 @@
       <!-- Quota Injori section end -->
     </section>
     <!-- donation div section end -->
-     
+
     <!-- pop up modal start -->
       <dialog id="my_modal_1" class="modal flex flex-col items-center justify-center text-center">
         <div class="modal-box">
