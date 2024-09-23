@@ -56,7 +56,7 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
 
   if (document.getElementById("noakhali-input").value === "" || myAmount === 0) {
      alert("Oppss...You can not donate money!");
-     return window.location.reload();
+    return window.location.reload();
   };
 
   // donation amount addjs
