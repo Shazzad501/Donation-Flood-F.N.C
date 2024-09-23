@@ -54,7 +54,7 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
 
   // my money amount validation for 0 or less and empty input filed validation
 
-  if(document.getElementById("noakhali-input").value === "" || myAmount === 0) {
+  if(document.getElementById("noakhali-input").value === "" || myAmount === 0 || document.getElementById("noakhali-input").value > myAmount) {
     alert("Oppss...You can not donate money!");
     const filedReset = document.getElementById('noakhali-input').value = '';
     return filedReset;
@@ -88,6 +88,9 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
   `;
   document.getElementById("history-sec").appendChild(div);
 
+  // modal show js
+  document.getElementById('my_modal_1').showModal();
+
   // input filed reempty js
   document.getElementById("noakhali-input").value = "";
 
@@ -120,7 +123,7 @@ document.getElementById("feni-btn").addEventListener("click", function () {
 
   // my money amount validation for 0 or less and empty input filed validation
 
-  if (document.getElementById("feni-input").value === "" || myAmount === 0) {
+  if (document.getElementById("feni-input").value === "" || myAmount === 0 || document.getElementById("feni-input").value > myAmount) {
     alert("Oppss...You can not donate money!");
     const filedReset = document.getElementById('feni-input').value = '';
     return filedReset;
@@ -155,6 +158,9 @@ document.getElementById("feni-btn").addEventListener("click", function () {
   `;
   document.getElementById("history-sec").appendChild(div);
 
+  // modal show js
+  document.getElementById('my_modal_1').showModal();
+
   // input filed reempty js
   document.getElementById("feni-input").value = "";
 });
@@ -186,7 +192,7 @@ document.getElementById("qouta-btn").addEventListener("click", function () {
 
 // my money amount validation for 0 or less and empty input filed validation
 
-  if (document.getElementById("qouta-input").value === "" || myAmount === 0) {
+  if (document.getElementById("qouta-input").value === "" || myAmount === 0 || document.getElementById("qouta-input").value > myAmount) {
     alert("Oppss...You can not donate money!");
     const filedReset = document.getElementById('qouta-input').value = '';
     return filedReset;
@@ -220,6 +226,9 @@ document.getElementById("qouta-btn").addEventListener("click", function () {
         <p class="font-semibold text-base">Date : ${localtime}.</p>
   `;
   document.getElementById("history-sec").appendChild(div);
+
+  // modal show js
+  document.getElementById('my_modal_1').showModal();
 
  // input filed reempty js  
   document.getElementById("qouta-input").value = "";
