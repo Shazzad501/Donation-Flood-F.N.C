@@ -54,9 +54,10 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
 
   // my money amount validation for 0 or less and empty input filed validation
 
-  if (document.getElementById("noakhali-input").value === "" || myAmount === 0) {
-     alert("Oppss...You can not donate money!");
-    return window.location.reload();
+  if(document.getElementById("noakhali-input").value === "" || myAmount === 0) {
+    alert("Oppss...You can not donate money!");
+    const filedReset = document.getElementById('noakhali-input').value = '';
+    return filedReset;
   };
 
   // donation amount addjs
@@ -121,7 +122,8 @@ document.getElementById("feni-btn").addEventListener("click", function () {
 
   if (document.getElementById("feni-input").value === "" || myAmount === 0) {
     alert("Oppss...You can not donate money!");
-    return window.location.reload();
+    const filedReset = document.getElementById('feni-input').value = '';
+    return filedReset;
  };
 
 //  feni new donate amount addition js
@@ -186,7 +188,8 @@ document.getElementById("qouta-btn").addEventListener("click", function () {
 
   if (document.getElementById("qouta-input").value === "" || myAmount === 0) {
     alert("Oppss...You can not donate money!");
-    return window.location.reload();
+    const filedReset = document.getElementById('qouta-input').value = '';
+    return filedReset;
  };
 
 
