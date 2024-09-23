@@ -61,12 +61,12 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
   };
 
   // donation amount addjs
-  const noakhaliAmountTotal = noakhaliAmount + noakhaliInput;
+  const noakhaliAmountTotal = (noakhaliAmount + noakhaliInput).toFixed(2);
   const noakhaliNewAmount = document.getElementById("noakhali-amount");
   noakhaliNewAmount.innerText = noakhaliAmountTotal;
 
   // my new amount add js
-  const myAmountTotal = myAmount - noakhaliInput;
+  const myAmountTotal = (myAmount - noakhaliInput).toFixed(2);
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
 
@@ -130,13 +130,13 @@ document.getElementById("feni-btn").addEventListener("click", function () {
  };
 
 //  feni new donate amount addition js
-  const feniAmountTotal = feniAmount + feniInput;
+  const feniAmountTotal = (feniAmount + feniInput).toFixed(2);
   const feniNewAmount = document.getElementById("feni-amount");
   feniNewAmount.innerText = feniAmountTotal;
 
 
 //  mey new amount addition js
-  const myAmountTotal = myAmount - feniInput;
+  const myAmountTotal = (myAmount - feniInput).toFixed(2);
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
   
@@ -200,13 +200,13 @@ document.getElementById("qouta-btn").addEventListener("click", function () {
 
 
 //  qouta new donate amount addition js
-  const qoutaAmountTotal = qoutaAmount + qoutaInput;
+  const qoutaAmountTotal = (qoutaAmount + qoutaInput).toFixed(2);
   const qoutaNewAmount = document.getElementById("qouta-amount");
   qoutaNewAmount.innerText = qoutaAmountTotal;
 
 
 //  my new amount addition js  
-  const myAmountTotal = myAmount - qoutaInput;
+  const myAmountTotal = (myAmount - qoutaInput).toFixed(2);
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
 
