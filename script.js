@@ -43,26 +43,34 @@ document.getElementById("donation-btn").addEventListener("click", function () {
   document.getElementById("history-sec").classList.add("hidden");
 });
 
-// Noakhali donation section js
+
+
+// Noakhali donation section js start
 
 document.getElementById("noakhali-btn").addEventListener("click", function () {
   const myAmount = idCallText("my-amount");
   const noakhaliAmount = idCallText("noakhali-amount");
   const noakhaliInput = inputIdCall("noakhali-input");
 
-  if (document.getElementById("noakhali-input").value === "") {
-    alert("Empty Input filed");
-    return;
-  }
+  // my money amount validation for 0 or less and empty input filed validation
 
+  if (document.getElementById("noakhali-input").value === "" || myAmount === 0) {
+     alert("Oppss...You can not donate money!");
+     return window.location.reload();
+  };
+
+  // donation amount addjs
   const noakhaliAmountTotal = noakhaliAmount + noakhaliInput;
   const noakhaliNewAmount = document.getElementById("noakhali-amount");
   noakhaliNewAmount.innerText = noakhaliAmountTotal;
 
+  // my new amount add js
   const myAmountTotal = myAmount - noakhaliInput;
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
 
+
+  // history addition js
   const localtime = new Date();
   const div = document.createElement("div");
   div.classList.add(
@@ -79,30 +87,56 @@ document.getElementById("noakhali-btn").addEventListener("click", function () {
   `;
   document.getElementById("history-sec").appendChild(div);
 
+  // input filed reempty js
   document.getElementById("noakhali-input").value = "";
 
 });
 
-// feni donation section js
+
+// input filed validation for noakhali
+document
+  .getElementById("noakhali-input")
+  .addEventListener("keyup", function () {
+    const noakhaliInputValue = document.getElementById("noakhali-input").value;
+
+    if (noakhaliInputValue <= 0 || isNaN(noakhaliInputValue) === true) {
+      alert("Wrong Input! Please Enter Valid Number.");
+      document.getElementById("noakhali-input").value = "";
+      return;
+    }
+  });
+
+// Noakhali donation section js end
+
+
+
+// feni donation section js start
 
 document.getElementById("feni-btn").addEventListener("click", function () {
   const myAmount = idCallText("my-amount");
   const feniAmount = idCallText("feni-amount");
   const feniInput = inputIdCall("feni-input");
 
-  if (document.getElementById("feni-input").value === "") {
-    alert("Empty Input filed");
-    return;
-  }
+  // my money amount validation for 0 or less and empty input filed validation
 
+  if (document.getElementById("feni-input").value === "" || myAmount === 0) {
+    alert("Oppss...You can not donate money!");
+    return window.location.reload();
+ };
+
+//  feni new donate amount addition js
   const feniAmountTotal = feniAmount + feniInput;
   const feniNewAmount = document.getElementById("feni-amount");
   feniNewAmount.innerText = feniAmountTotal;
 
+
+//  mey new amount addition js
   const myAmountTotal = myAmount - feniInput;
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
   
+
+  // history addition js
   const localtime = new Date();
   const div = document.createElement("div");
   div.classList.add(
@@ -119,29 +153,55 @@ document.getElementById("feni-btn").addEventListener("click", function () {
   `;
   document.getElementById("history-sec").appendChild(div);
 
+  // input filed reempty js
   document.getElementById("feni-input").value = "";
 });
 
-// Qouta donation section js
+  // feni input filed validation
+
+  document
+  .getElementById("feni-input")
+  .addEventListener("keyup", function () {
+    const feniInputValue = document.getElementById("feni-input").value;
+
+    if (feniInputValue <= 0 || isNaN(feniInputValue) === true) {
+      alert("Wrong Input! Please Enter Valid Number.");
+      document.getElementById("feni-input").value = "";
+      return;
+    }
+  });
+
+// feni donation section js end
+
+
+
+// Qouta donation section js start
 
 document.getElementById("qouta-btn").addEventListener("click", function () {
   const myAmount = idCallText("my-amount");
   const qoutaAmount = idCallText("qouta-amount");
   const qoutaInput = inputIdCall("qouta-input");
 
-  if (document.getElementById("qouta-input").value === "") {
-    alert("Empty Input filed");
-    return;
-  }
+// my money amount validation for 0 or less and empty input filed validation
 
+  if (document.getElementById("qouta-input").value === "" || myAmount === 0) {
+    alert("Oppss...You can not donate money!");
+    return window.location.reload();
+ };
+
+
+//  qouta new donate amount addition js
   const qoutaAmountTotal = qoutaAmount + qoutaInput;
   const qoutaNewAmount = document.getElementById("qouta-amount");
   qoutaNewAmount.innerText = qoutaAmountTotal;
 
+
+//  my new amount addition js  
   const myAmountTotal = myAmount - qoutaInput;
   const myNewAmount = document.getElementById("my-amount");
   myNewAmount.innerText = myAmountTotal;
 
+// history addition js
   const localtime = new Date();
   const div = document.createElement("div");
   div.classList.add(
@@ -158,19 +218,24 @@ document.getElementById("qouta-btn").addEventListener("click", function () {
   `;
   document.getElementById("history-sec").appendChild(div);
 
+ // input filed reempty js  
   document.getElementById("qouta-input").value = "";
 });
 
-// input filed validation for no
-document
-  .getElementById("noakhali-input")
-  .addEventListener("keyup", function () {
-    const noakhaliInput = inputIdCall("noakhali-input");
-    const noakhaliInputValue = document.getElementById("noakhali-input").value;
+   // quota input filed validation
 
-    if (noakhaliInput <= 0) {
-      alert("Wrong Input! Please Enter Valid Number.");
-      document.getElementById("noakhali-input").value = "";
-      return;
-    }
-  });
+   document
+   .getElementById("qouta-input")
+   .addEventListener("keyup", function () {
+     const qoutaInputValue = document.getElementById("qouta-input").value;
+ 
+     if (qoutaInputValue <= 0 || isNaN(qoutaInputValue) === true) {
+       alert("Wrong Input! Please Enter Valid Number.");
+       document.getElementById("qouta-input").value = "";
+       return;
+     }
+   });
+
+
+// qouta donation section js end
+
